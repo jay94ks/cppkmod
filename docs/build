@@ -1,0 +1,29 @@
+
+12/09 2017 SAT
+----
+Jay K:
+----
+I'm sorry for pure build system....
+It will be improved in future...
+
+current build system is too much pure... I will improve that... sorry...
+
+the build flow, see below:
+	/Makefile -> /build/configure.sh				-> /sources/Makefile	-> /base/Makefile
+				 /build/configure-cpp.sh sources	   /framework/Makefile
+				 /build/configure-cpp.sh framework
+
+!!: /Makefile will create the file, /base/.cpt.mod_def.c with the MODULE_NAME, MODULE_LICENSE and MODULE_AUTHOR.
+the framework files is adaptive layer for supporting c++. 
+
+if Linus Benedict Torvalds found this implementation,
+	maybe....he will kill me with saying "fuck you!"....
+
+
+
+12/10 2017 SUN
+----
+Jay K:
+----
+I've modified all implementations of build system in Makefile.
+but, .... i don't like them...

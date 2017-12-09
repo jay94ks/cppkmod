@@ -1,0 +1,11 @@
+
+12/09 2017 SAT
+----
+Jay K:
+----
+
+control flow of the framework.
+
+insmod -> koBaseInit() at /base/module.c -> koInit() at /sources/komain.cpp
+rmmod -> koBaseCleanup() at /base/module.c -> koCleanup() at /sources/komain.cpp
+

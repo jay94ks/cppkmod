@@ -1,0 +1,8 @@
+
+12/10 2017 SUN
+----
+Jay K:
+----
+
+1. global constructors will be executed at koInit() - /base/module.c
+2. global destructors will be executed at koCleanup() - /base/module.c

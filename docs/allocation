@@ -1,0 +1,36 @@
+
+12/09 2017 SAT
+----
+Jay K:
+----
+
+the allocation mechanism uses kmalloc through forwarding functions (see /base/forwards.c)
+but, the strategies for c++ new operators can be configured by preprocessors in compile-time.
+
+#define CPP_NEW_ALLOCATION_GFP	GFP_ATOMIC
+#define CPP_NEW_ALLOCATION_GFP	GFP_KERNEL
+
+....
+these macro must be defined in "/headers/modcpp/base/policies.hpp"
+
+** IMPORTANT **
+in run-time, the module can allocate the memory passively with GFP flags.
+after then, construct the c++ instance with placement operator.
+
+if you must use multiple method of allocation source,
+	the method using placement operator must be used for that.
+	
+SOFTWARE OVERHEAD WARNINGS: below codes are part of /base/kmalloc.c:
+
+/*
+ * the kmalloc(...) function defined as inline.
+ * so, it cannot be used by 'extern "C"'
+ *
+ * NOTE: this can be software overhead during encapsulation.
+ * 	we must find other way to use kmalloc instead of ___kmalloc in below.
+ * */
+void* ___kmalloc(size_t sz, gfp_t type) {
+	return kmalloc(sz, type);
+}
+
+..... We must find.... other ways...
