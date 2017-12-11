@@ -18,7 +18,7 @@
 
 #include <modcpp/base/typedefs.hpp>
 #include <modcpp/base/kmod_forward.hpp>
-#include <modcpp/device/network/protocol.hpp>
+#include <modcpp/device/network/packet_type_t.hpp>
 
 
 #endif /* HEADERS_MODCPP_DEVICE_NETWORK_HPP_ */
