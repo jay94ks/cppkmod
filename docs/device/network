@@ -1,0 +1,9 @@
+
+12/11 2017 MON
+----
+Jay K:
+----
+
+all of headers in device/network/sk_buff.hpp, ... will be just simplified version.
+
+if you want to use more detailed, you can refer implementation of base and libjay.

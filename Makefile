@@ -18,8 +18,8 @@ rebuild-all:
 	@make clean-all
 	@make all
 	
-insmod:
+insmod: all
 	@sudo insmod build/$(MODULE_NAME).ko 
 	
-rmmod:
+rmmod: all
 	@sudo rmmod $(MODULE_NAME)
